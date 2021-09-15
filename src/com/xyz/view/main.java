@@ -297,7 +297,13 @@ public class main extends javax.swing.JFrame {
 
             } else {
 
-                model.removeRow(tablaRepartidores.getSelectedRow());
+               nombre.setText(String.valueOf(model.getValueAt(tablaRepartidores.getSelectedRow(), 0)));
+                edad.setText(String.valueOf(model.getValueAt(tablaRepartidores.getSelectedRow(), 1)));
+                salario.setText(String.valueOf(model.getValueAt(tablaRepartidores.getSelectedRow(), 2)));
+                zona.setText(String.valueOf(model.getValueAt(tablaRepartidores.getSelectedRow(), 3)));
+                String[] empleado = {"repartidor", nombre.getText(), edad.getText(),
+                    salario.getText(), zona.getText()};
+                this.borrarTabla(empleado);
 
             }
 
